@@ -8,7 +8,7 @@
 </head>
 <body>
 
-        <div>
+        <div class="container">
             <div class="myclass">
                 Hello World
             </div>
@@ -16,15 +16,30 @@
                 It's Rohith
             </div>
             <div class="mysvg">
-                <svg width="500px" height="500px">
+                <svg width="20rem" height="20rem" viewBox="0 0 480 480">
                     <circle cx="240" cy="240" r="160" fill="black" stroke="white" stroke-width="10px"></circle>
                     <ellipse cx="175" cy="190" rx="40" ry="50" fill="white"></ellipse>
                     <ellipse cx="300" cy="190" rx="40" ry="50" fill="white"></ellipse>
-                    <ellipse cx="240" cy="300" rx="75" ry="40" fill="white"></ellipse>
-                    <ellipse cx="240" cy="280" rx="90" ry="45" fill="black"></ellipse>
+                    <ellipse class="mouth-close" cx="240" cy="300" rx="75" ry="40" fill="white"></ellipse>
+                    <ellipse class="mouth-open" cx="240" cy="302" rx="77" ry="42" fill="white"></ellipse>
+                    <ellipse cx="240" cy="290" rx="90" ry="45" fill="black"></ellipse>
                 </svg>
+            </div>
+            <div class="link">
+                <a href="https://rohith-m10.github.io/Portfolio/" onmouseover="hover()" onmouseleave="leave()"><button>My Portfolio</button></a>
             </div>
         </div>
     
 </body>
+
+<script>
+    function hover(){
+        document.querySelector('.mouth-close').style.display = 'none';
+        document.querySelector('.mouth-open').style.display = 'block';
+    }
+    function leave(){
+        document.querySelector('.mouth-close').style.display = 'block';
+        document.querySelector('.mouth-open').style.display = 'none';
+    }
+</script>
 </html>
